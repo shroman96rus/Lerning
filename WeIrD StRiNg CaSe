@@ -1,0 +1,23 @@
+public static string ToWeirdCase(string s)
+        {
+            string[] sss = s.Split(' ');
+            for (int j = 0; j < sss.Length; j++)
+            {
+                for (int i = 1; i < sss[j].Length; i = i + 2)
+                {
+                    sss[j] = sss[j].Insert(i, " ");
+                }
+                string[] ss = sss[j].Split(' ');
+                for (int i = 0; i < ss.Length; i += 2)
+                {
+                    ss[i] = ss[i].ToString().ToUpper();
+                }
+                for (int i = 1; i < ss.Length; i += 2)
+                {
+                    ss[i] = ss[i].ToString().ToLower();
+                }
+                sss[j] = string.Join("", ss);
+            }
+            s = string.Join(" ",sss);
+            return s;
+        }

@@ -1,0 +1,4 @@
+for (int i = 1; i < number.Length; i=i+2)
+            {
+                number = number.Insert(i," ");
+            }

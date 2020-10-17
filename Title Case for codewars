@@ -1,0 +1,32 @@
+namespace Lessons
+{
+    class Example
+    {
+        public static string TitleCase(string title, string minorWords)
+        {
+            string[] title_arr = title.Split();
+            string[] minorWordsArr = minorWords.Split();
+            title_arr[0] = title_arr[0].Substring(0, 1).ToUpper() + title_arr[0].Substring(1).ToLower();
+            for (int i = 1; i < title_arr.Length; i++)
+            {
+                title_arr[i] =  title_arr[i].Substring(0,1).ToUpper() + title_arr[i].Substring(1).ToLower();
+                for (int j = 0; j < minorWordsArr.Length; j++)
+                {
+                    if (title_arr[i].ToUpper() == minorWordsArr[j].ToUpper()) {title_arr[i] = title_arr[i].ToLower(); break; }
+                    
+                }
+                
+            }
+            title = string.Join(" ", title_arr);
+            return title;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(TitleCase("THE WIND IN THE WILLOWS", "The In"));
+            
+            
+        }
+        
+    }
+}

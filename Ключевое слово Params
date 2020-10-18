@@ -1,0 +1,23 @@
+namespace SimpleCode
+{
+    class SimpleCode
+    {
+
+        static int sum(params int[] parametrs)
+        {
+            int result = 0;
+            foreach (int el in parametrs)
+            {
+                result = result + el;
+            }
+            return result;
+        }
+
+        static void Main(string[] args)
+        {
+            int a = sum(10,11,12,22);
+            Console.WriteLine(a);
+        
+        }
+    }
+}

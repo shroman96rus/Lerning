@@ -1,0 +1,14 @@
+static int sum(int a, int b, bool logging = false)
+        {
+            int result = a + b;
+            if (logging) { Console.WriteLine("{0} сумма двух чисел", result); }
+
+            return result;
+        }
+
+        static void Main(string[] args)
+        {
+            int a = sum(10,11, true);
+            Console.WriteLine("Сумма всех чисел равна {0} complite", a);
+        
+        }

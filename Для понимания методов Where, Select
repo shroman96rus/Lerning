@@ -1,0 +1,5 @@
+
+return string.Join(" ", text.ToLower()
+                                          .Where(c => char.IsLetter(c))
+                                          .Select(c => "abcdefghijklmnopqrstuvwxyz".IndexOf(c) + 1)
+                                          .ToArray());

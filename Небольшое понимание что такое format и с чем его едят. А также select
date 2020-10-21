@@ -1,0 +1,41 @@
+class Example
+    {
+        public static string CreatePhoneNumber(int[] numbers)
+        {
+            string phone_number = "(";
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                phone_number += Convert.ToString(numbers[i]);
+                if (i == 3) { phone_number = phone_number.Insert(i + 1, ")" + " "); }
+                if (i == 8) { phone_number = phone_number.Insert(i + 1, "-"); }
+
+            }
+
+            return phone_number;
+        }
+
+        public static string CreatePhoneNumbernew(int[] numbers)
+        {
+            string phone_number = string.Format("({0}{1}{2}) {3}{4}{5}-{6}{7}{8}", numbers.Select(x => x.ToString()).ToArray());
+
+            return phone_number;
+        }
+        public static string selected(int[] a)
+        {
+            string[] slovo = a.Select(x => x.ToString()).ToArray();
+            string s = string.Format("hello  {0}", a.Select(x => x.ToString()).ToArray());
+            return s;
+        }
+        
+
+
+        static void Main(string[] args)
+        {
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+            Console.WriteLine(CreatePhoneNumbernew(numbers));
+            int[] a = { 1, 2, 4 };
+            Console.WriteLine(selected(a));
+
+        }
+        
+    }

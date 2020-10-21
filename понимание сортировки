@@ -1,0 +1,20 @@
+public static String[] LineupStudents(String a)
+        {
+            return a.Split().OrderBy(s => -s.Length).ThenByDescending(s => s).ToArray();
+        }
+
+        static void Main(string[] args)
+        {
+            string examp = "Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi";
+            string[] students = examp.Split(' ');
+            IEnumerable<string> res = students.OrderBy(student => student.Length);//from student in students orderby student.Length select student;
+            string[] result = res.ToArray();
+            Array.Reverse(result);
+
+            foreach (var item in result)
+            {
+                
+                Console.Write(item + "  ");
+            }
+
+        }

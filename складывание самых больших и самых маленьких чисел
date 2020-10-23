@@ -1,0 +1,25 @@
+public static int[] ChoreAssignment(int[] chores)
+        {
+            var sorted = chores.OrderBy(i => i);
+            var pairs = sorted.Zip(sorted.Reverse(), (i, j) => i + j).Take(sorted.Count() / 2);
+            pairs = pairs.OrderBy(i => i).ToArray();
+            foreach (var item in pairs)
+            {
+                Console.WriteLine(item);
+            }
+            return pairs.OrderBy(i => i).ToArray();
+        }
+
+        static void Main(string[] args)
+        {
+            int[] chores = { 1, 5, 2, 8, 4, 9, 6, 4, 2, 2, 2, 9 };
+            //int[] student_chores = ChoreAssignment(chores);
+            var result = chores.OrderBy(i => i);
+
+            var res = result.Zip(result.Reverse(), (i, j) => i + j );
+            res = res.Take(res.Count()/2);
+            res = res.OrderBy(i => i).ToArray();
+            foreach (var item in res)
+            {
+                Console.WriteLine(item);
+            }

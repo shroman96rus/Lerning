@@ -1,0 +1,15 @@
+public static int GetVowelCount(string str)
+        {
+            int vowelCount = 0;
+            //foreach (var item in str)
+            //{
+            //    if(item == 'a') { vowelCount++; }
+            //    if (item == 'e') { vowelCount++; }
+            //    if (item == 'i') { vowelCount++; }
+            //    if (item == 'o') { vowelCount++; }
+            //    if (item == 'u') { vowelCount++; }
+            //}
+            vowelCount = str.Count(i => "a".Contains(i));
+
+            return vowelCount;
+        }

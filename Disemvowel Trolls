@@ -19,4 +19,22 @@ public static string Disemvowel(string str)
         }
         
         
+        public static string Disemvowel(string str)
+        {
+                return string.Concat(str.Where(ch => !"aeiouAEIOU".Contains(ch)));
+        }
+        
+        public static string Disemvowel(string str)
+  {
+    string strNew = "";
+
+            string[] strings = str.Split('a', 'u', 'e', 'i', 'o', 'A', 'U', 'E', 'I', 'O');
+
+            foreach (var item in strings)
+            {
+                strNew += item;
+            }
+            
+    return strNew;
+  }
         

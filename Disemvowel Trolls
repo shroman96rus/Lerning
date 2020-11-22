@@ -1,0 +1,22 @@
+public static string Disemvowel(string str)
+        {
+            string result = "";
+            foreach (var item in str)
+            {
+                if (item != 'a' && item != 'e' && item != 'i' && item != 'o' && item != 'u' &&
+                    item != 'A' && item != 'E' && item != 'I' && item != 'O' && item != 'U')
+                {
+                    result = result + item;
+                }
+            }
+
+            return result;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Disemvowel("This website is for losers LOL!"));
+        }
+        
+        
+        
